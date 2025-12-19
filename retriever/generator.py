@@ -3,7 +3,7 @@ from google import genai
 
 class RAGGenerator:
     def __init__(self, primary_model="models/gemini-2.5-flash", fallback_model="models/gemma-3-27b"):
-        self.client = genai.Client(api_key="AIzaSyBD4CEjduLEf-ZggPc66LiFSvkx6x_1SfY") 
+        self.client = genai.Client(api_key="") 
         self.primary_model = primary_model
         self.fallback_model = fallback_model
 
@@ -35,3 +35,4 @@ Answer concisely and accurately. If unknown, say 'I don't know'.
                 generation_config={"temperature": 0.0}
             )
             return response.text
+
